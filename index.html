@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBDA228-Assignment3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F6DC;
+          	color: #D0BE8F;
+        }
+        
+      	a {
+        	color: #D0BE8F;
+      	}
+        h1 {
+            font-size: 30px;
+        }
+      
+        h2 { 
+            font-size: 30px;
+        }
+      
+        img {
+            border-radius: 20px; 
+            border: 3px solid #6A5D3E;
+        }
+      
+        .box1 {
+            background-color: #676C3B;
+            border: 10px solid #6A5D3E;
+            border-radius: 20px;
+            width: 400px;
+            padding: 30px;
+            margin: 20px;
+          	min-height: 550px
+        }
+      
+        .box2 {
+            background-color: #676C3B;
+            border: 10px solid #6A5D3E;
+            border-radius: 20px;
+            width: 550px;
+            padding: 40px;
+            margin: 20px;
+        }
+      
+        .box3 {
+            background-color: #676C3B;
+            border: 10px solid #6A5D3E;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 0px;
+            position: relative;
+        }
+      
+      	.box4 {
+            background-color: #676C3B;
+            border: 10px solid #6A5D3E;
+            border-radius: 20px;
+            width: 700px;
+            padding: 40px;
+            margin: 0 auto;
+          	max-width: 800px;
+        }
+      
+      
+        .pic-position {   
+            margin-top: -550px; /* This section is used for only my aboutme image */
+            margin-bottom: 10px;
+            margin-left: 410px;
+        }
+      
+        .about-me-image {
+            border: 10px solid #D0BE8F;
+        }
+    
+        .design_1 {
+            color: #F4F6DC;
+            font-size: 50px;
+            margin-left: 615px;
+            margin-top: -220px;
+        }
+      
+        .design_2 {
+            color: #F4F6DC;
+            font-size: 40px;
+            margin-left: 380px;
+            margin-top: -30px;
+        }
+      
+        .design_3 {
+            color: #F4F6DC;
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            left: -27%; 
+            transform: translate(-50%, -50%);
+        }
+      
+        nav {
+            background-color: #6A5D3E;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        nav a {
+            color: #F4F6DC;
+            text-decoration: none;
+            margin: 0 15px;
+          	transition: background-color 0.3s;
+        }
+      	
+      	nav a:hover {
+        		background-color: #8B735B;
+          	border-radius: 10px;
+        }
+
+        section {
+            padding: 50px;
+            margin: 20px;
+            color: #fff;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        #section1 {
+            color: #F4F6DC;
+            background-color: #B8BE86;
+            border-radius: 20px;
+        }
+
+        #section2 {
+            color: #F4F6DC;
+            background-color: #B8BE86;
+            border-radius: 20px;
+        }
+
+        #section3 {
+            background-color: #B8BE86;
+            border-radius: 20px;
+        }
+
+        #section4 {
+            background-color: #B8BE86;
+            border-radius: 20px;
+            padding: 50px;
+          	text-align: center;
+        }
+      
+       table {
+        		width: 100%;
+         		border-collapse: collapse;
+         		margin-top: 20px;
+         		background-color: #D0BE8F
+        }
+      
+      	th, td {
+        		border: 1px solid #ddd;
+          	padding: 8px;
+          	text-align: left;
+      	}
+      
+       th {
+           background-color: #B3A786;
+      	}
+      
+      table td, table th {
+        color: black;
+      }
+
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .row {
+            display: flex; /* the .row and .colum sections create my photo grid on the Hobbies & Interests page */
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .column {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            width: 100%;
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        #section3 .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+        }
+
+        #section3 img {
+            width: 230px;
+            height: 300px;
+            margin-right: 20px;
+        }
+
+        #section3 .box3 {
+            background-color: #676C3B;
+            border: 10px solid #6A5D3E;
+            border-radius: 20px;
+            width: 70%;
+            padding: 40px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#section1"><strong><u>About Me</u></strong></a>
+    <a href="#section2"><strong><u>Hobbies</u></strong></a>
+    <a href="#section3"><strong><u>Education</u></strong></a>
+    <a href="#section4"><strong><u>Future Goals</u></strong></a>
+</nav>
+
+<section id="section1">
+    <h1>✿ ABOUT ME ✿</h1>
+    <div class="box1">
+        <p><br>Hello and welcome to my digital space!<br>
+            <br>I'm Sakeena Naeem, a passionate student currently<br>navigating the stimulating academic waters at<br>the University of Waterloo. 
+          Currently immersed in my second year, I've chosen to pursue my educational<br>journey through the captivating realm of <i>Global<br>Business and Digital Arts</i>.
+          <br> <br>
+          
+          Click <a href="https://uwaterloo.ca/stratford-school-of-interaction-design-and-business/global-business-and-digital-arts" target="_blank">here</a> for more information on the program!<br>
+            <br>This website serves as a window into my world, offering you a glimpse into the facets of my life and the tapestry of my interests. 
+            Here, I'll be sharing my experiences, achievements, and the creative endeavors that define my unique journey. <br>
+            <br>Join me as I weave together the threads of academia,personal growth, and the ever-evolving landscape of global business and digital arts.<br>
+            <br>
+            <img src="img_aboutme2.jpg" alt="picofme" width="300" height="365" class="pic-position about-me-image">
+        </p>
+        <div class="design_1">⋆˚✿˖°</div>
+    </div>
+</section>
+
+<section id="section2">
+    <div class="grid-container">
+        <h2><center>✿ HOBBIES & INTERESTS ✿</center></h2>
+        <div class="row">
+            <div class="column">
+                <img src="img_holdingkirpy.jpg" alt="me" style="width:100%">
+                <img src="img_pond.jpg" alt="pond" style="width:100%">
+                <img src="img_fall.jpg" alt="cat" style="width:100%">
+                <img src="img_pumpkins.jpg" alt="book" style="width:100%">
+                <img src="img_tomatoes.jpg" alt="garden" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="img_book.jpg" alt="book" style="width:100%">
+                <img src="img_planes.jpg" alt="dog" style="width:100%">
+                <img src="img_fireworks.jpg" alt="fireworks" style="width:100%">
+                <img src="img_snoopy2.jpg" alt="me" style="width:100%">
+                <img src="img_sky.jpg" alt="me" style="width:100%">
+                <img src="img_concert2.jpg" alt="cat" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="img_color.jpg" alt="coloring" style="width:100%">
+                <img src="img_sunset.jpg" alt="sun" style="width:100%">
+                <img src="img_oreo2.jpg" alt="dog" style="width:100%">
+                <img src="img_mirror.jpg" alt="me" style="width:100%">
+                <img src="img_food2.jpg" alt="food" style="width:100%">
+            </div>
+        </div>
+        <div class="box2">
+            <p>Diving into the fusion of my interests, life becomes a series of cherished 
+                pursuits that add color and rhythm to my everyday experiences. The call of 
+                the outdoors lures me, enticing me into relaxing walks and invigorating hikes.
+                Armed with a camera, I revel in the art of photography, manipulating colors 
+                and contrasts to capture the raw beauty of nature. My taste buds are on a 
+                perpetual adventure as I explore new foods and indulge in the simple joy of 
+                gardening with my family.<br><br> When I'm not immersed in the outdoors or savoring 
+                flavors, I lose myself in the captivating worlds of mystery and fantasy books.
+                Expressing my creativity takes various forms, from wielding watercolors on 
+                canvas to carefully shading with alcoholic markers. The energy of live music 
+                pulls me into concert venues, where my diverse music taste finds its home. 
+                Amidst all these pursuits, one constant source of joy is Lion, my sister's 
+                cat, capturing my heart and lens with his endearing antics. Life, for me, 
+                is a wide-ranging blend of passions that shape my journey in delightful ways.
+            </p>
+            <div class="design_2">૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა</div>
+        </div>
+    </div>
+</section>
+
+<section id="section3">
+    <h2>✿ Education ✿</h2>
+    <div class="container">
+        <img src="gradpic2.JPG" alt="picofme" width="230" height="300">
+        <div class="box3">
+            <p>In high school, my interests were quite diverse, reflecting my curiosity about different subjects. 
+                I found enjoyment in both my science and math courses, appreciating the analytical challenges they presented. 
+                Simultaneously, my passion for arts and social sciences shone through, with a love for the creativity and 
+                insights they offered.<br><br>As my high school journey progressed, my focus shifted during my last year. Originally 
+                gearing up to apply for a criminology program, I delved into law and social science courses. The allure of 
+                exploring the intricate realms of crime and law captivated me, and my interest in forensics and legal studies deepened.<br>
+                <br>Reflecting on my childhood, I've always been drawn to arts and crafts. This love for creating with my hands and 
+                using my imagination persisted into my free time, where I would engage in various projects. From tinkering with 
+                ideas inspired by YouTube videos to solving creative challenges, my love for crafting became a constant in my life.<br>
+                <br>Navigating the transition from high school to university was marked by a period of exploration and self-discovery. 
+                While sciences and maths occupied my focus in the initial three years, a significant shift occurred in my final year. 
+                Driven by a newfound passion for criminology, I embarked on a two-year journey into the world of crime and law, 
+                accompanied by a minor in UX Design.<br><br> As much as I cherished my time as a criminology student, the allure of UX 
+                design gradually took precedence. After careful contemplation, I made the decision to pivot towards UX design, 
+                where I am excited to continue learning and growing within the GBDA program. While I may miss my days as a criminology student, 
+                I eagerly anticipate the opportunities for development that lie ahead in the world of UX design.
+            </p>  
+            <div class="design_3"><br>☆<br><br><br>★<br><br><br>☆<br><br><br><br><br><br><br><br><br><br>☆<br><br><br>★<br><br><br>☆<br><br><br></div>
+        </div>
+    </div>
+</section>
+
+<section id="section4">
+    <h2>✿ Future Goals ✿</h2>
+  <div class="box4">
+    <p>I have numerous goals I aspire to achieve in my life. While I'm uncertain about
+      how things will unfold, I am committed to putting forth my best effort to succeed
+      positively in the choices I make. My top three priorities in life are my mental 
+      health, education, and future occupation. These goals will continuously evolve and 
+      adapt as I strive to pursue them throughout my life, contributing to a healthier 
+      mental state along the way.To maintain this mindset, I am mindful of the various 
+      ways I can stay on track. I remain aware of the necessary steps, guided by my 
+      motivation and the reasons behind pursuing these objectives. I have organized my 
+      future goals into tables that outline the reasoning, motivation, and steps 
+      required for success.<br>
+</p>
+  
+  <h2>Goal 1</h2>
+   <table>
+    <tr>
+      <th>Section</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td>Goal</td>
+      <td>Education - Good Grades</td>
+    </tr>
+    <tr>
+      <td>Reason</td>
+      <td>Having good grades help build a foundation in my portfolio, making my step closer in becoming a UX Designer. </td>
+    </tr>
+    <tr>
+      <td>Motivation</td>
+      <td>
+        <ul>
+          <li>Career Opportunities</li>
+          <li>Communication Skills</li>
+          <li>Understanding of Design Principles</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Steps to Take</td>
+      <td>
+        <ul>
+          <li>Staying Organized</li>
+          <li>Seek Clarification</li>
+          <li>Prioritize and Manage Time</li>
+          <li>Active Participation In Class</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Goal 2</h2>
+
+  <table>
+    <tr>
+      <th>Section</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td>Goal</td>
+      <td>Future Occupation - UX Designer</td>
+    </tr>
+    <tr>
+      <td>Reason</td>
+      <td>Passion For Crafting Seamless User Experiences</td>
+    </tr>
+    <tr>
+      <td>Motivation</td>
+      <td>Desire For Transformative Impact On Users Lives</td>
+    </tr>
+    <tr>
+      <td>Steps to Take</td>
+      <td>
+        <ul>
+          <li>Strengthen Academic Foundation</li>
+          <li>Seek Internship Opportunities</li>
+          <li>Apply Theoretical Knowledge In Real-Word Scenarios</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Goal 3</h2>
+
+  <table>
+    <tr>
+      <th>Section</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td>Goal</td>
+      <td>Mental Health - Happy Mindset</td>
+    </tr>
+    <tr>
+      <td>Reason</td>
+      <td>Recognizing the importance of mental well-being in overall health and life satisfaction</td>
+    </tr>
+    <tr>
+      <td>Motivation</td>
+      <td>
+        <ul>
+          <li>Seeking A Fulfilling And Balanced Life</li>
+          <li>Understanding The Impact Of Mental Health On Daily Functioning And Relationships</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Steps to Take</td>
+      <td>
+        <ul>
+          <li>Prioritize Self-Care Routines</li>
+          <li>Engage In Activities That Bring Joy And Relaxation</li>
+          <li>Practice Mindfulness And Stress-Reduction Techniques</li>
+          <li>Seek Professional Help When Needed</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  </div>
+  </section>
+  </body>
+</html>
